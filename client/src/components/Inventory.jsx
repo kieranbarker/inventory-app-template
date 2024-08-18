@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-function App() {
+function Inventory() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -13,16 +14,22 @@ function App() {
     fetchItems();
   }, []);
 
+  useEffect(() => {
+    document.title = "Inventory";
+  }, []);
+
   return (
     <>
       <h1>Inventory</h1>
       <ul>
         {items.map((item) => (
-          <li key={item.id}>{item.name}</li>
+          <li key={item.id}>
+            <Link to={`/items/${item.id}`}>{item.name}</Link>
+          </li>
         ))}
       </ul>
     </>
   );
 }
 
-export default App;
+export default Inventory;

@@ -38,18 +38,18 @@ On the back end, you'll need:
 
 On the front end, you'll need:
 
-- A view for all items (this has been **started** for you in `client/src/App.jsx`).
+- A view for all items (this has been **started** for you in `client/src/components/Inventory.jsx`).
 
 #### A user should be able to view a single item.
 
 On the back end, you'll need:
 
-- A prepared statement to select an item from the `items` table by `id`.
-- A `GET /items/:id` route.
+- A prepared statement to select an item from the `items` table by `id` (this has been **provided** for you in `server/db/db.js`).
+- A `GET /items/:id` route (this has been **provided** for you in `server/app.js`).
 
 On the front end, you'll need:
 
-- A view for a single item.
+- A view for a single item (this has been **started** for you in `client/src/components/Item.jsx`).
 
 ### Tier 2: Adding an Item
 
